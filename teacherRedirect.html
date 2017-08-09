@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<title>Desk Application</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/w3-theme.css">
+<link rel="stylesheet" href="css/w3-fas.css">
+
+
+<body onload="SubjectList()">
+
+<nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="mySidenav">
+  <a href="javascript:void(0)" onclick="w3_close()" 
+  class="w3-closenav w3-large">Close &times;</a>
+  <a style="color:aliceblue;" href="#">Link 1</a>
+  <a style="color:aliceblue;" href="#">Link 2</a>
+  <a style="color:aliceblue;" href="#">Link 3</a>
+  <a style="color:aliceblue;" href="login.html">Login</a>
+  <a style="color:aliceblue;" href="register.html">Signup</a>
+</nav>
+
+<header class="w3-container  w3-2017-navy-peony row" style="padding:20px">
+  <span class="w3-opennav w3-xxlarge col-sm-3" onclick="w3_open()">&#9776;</span>
+  <span align="center" class="col-sm-6">
+    <h1> Desk Application</h1>
+  </span>
+ <button style="float: right;"  type="button" class="w3-button w3-xxlarge col-sm-3 w3-2017-navy-peony" onclick="logout()">Logout</button>
+</header>
+
+
+<div id="parentElement1" style="display:block;">
+  <div id="childElement1"></div>
+</div>
+
+<div id="parentElement2">
+    <div id="childElement2" ></div>
+</div>
+
+<div  id="parentElement3" style="display:none;" class="w3-container" align="center" style="padding: 20px;">  
+  <div class="w3-card-24" style="width: 50%">
+    <div class="w3-container w3-theme">
+      <h2>Add Message</h2>
+    </div>
+
+    <form class="w3-container" action="" method="POST">
+      <p>
+      <label style="float:left">Title</label>
+      <input class="w3-input w3-border" id="title" name="title" type="text" required placeholder="title" >
+      <br></p>
+      <p>  
+      <label style="float:left">Content</label>   
+      <textarea class="w3-input w3-border" style="  height: 150px;" id = "content" name = "content" type="text" required placeholder="Content"></textarea>
+      <br>
+      <p>
+      <button type="button" class="w3-button w3-xlarge w3-theme" onclick="AddMessage()">Add Messages</button><br>
+      </p>
+    </form>
+  </div>
+</div>
+
+<button onclick="AddFunction()" class="w3-button w3-circle w3-2017-navy-peony w3-xlarge" style="position: fixed; bottom: 10px; right: 10px; ">+</button>
+
+
+
+<!--<footer class="w3-container w3-teal">
+  <h5>Footer</h5>
+  <p>Footer information goes here</p>
+</footer>-->
+     
+<script>
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<script src="js/FirebaseData.js"></script>
+</body>
+</html> 

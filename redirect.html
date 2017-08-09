@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Desk Application</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/w3-theme.css">
+<link rel="stylesheet" href="css/w3-fas.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body onload="SubsClass()">
+
+<nav class="w3-sidenav  w3-2017-navy-peony w3-card-2" style="display:none" id="mySidenav">
+  <a href="javascript:void(0)" onclick="w3_close()" 
+  class="w3-closenav w3-large ">Close &times;</a>
+  <a style="color:aliceblue;" href="#">Link 1</a>
+  <a style="color:aliceblue;" href="#">Link 2</a>
+  <a style="color:aliceblue;" href="#">Link 3</a>
+  <a style="color:aliceblue;" href="login.html">Login</a>
+  <a style="color:aliceblue;" href="register.html">Signup</a>
+</nav>
+
+<header class="w3-container  w3-2017-navy-peony row" style="padding:20px">
+  <span class="w3-opennav w3-xxlarge col-sm-3" onclick="w3_open()">&#9776;</span>
+  <span align="center" class="col-sm-6">
+    <h1> Desk Application</h1>
+  </span>
+ <button style="float: right;"  type="button" class="w3-button w3-xxlarge col-sm-3 w3-2017-navy-peony" onclick="logout()">Logout</button>
+</header>
+
+
+<div id="parentElement1">
+  <div id="childElement1"></div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+    <br>
+<div id="parentElement2" ><br><br>
+  <div id="childElement2"  ></div>
+</div>
+  </div>
+<div class="col-sm-8">
+<br><br>
+<div id="parentElement3" style="margin:20px;" >
+<div id ='x'>
+
+</div>
+      <input class="w3-border w3-input " id="input" style="display :none;" type="text" placeholder="comment.."></input>
+      <br>
+            <button style="display :none; float: center;" type="button" id="bin" class="w3-button w3-xlarge w3-theme" onclick="writeTocomm()">enter</button>
+
+</div>
+
+</div>
+</div>
+<!--<div id="parentElement4">
+      <input class="w3-border w3-input " id="input" style="display :none;" type="text" placeholder="comment.."></input>
+      <br>
+      <button style="display :none; float: center;" type="button" id="bin" class="w3-button w3-xlarge w3-theme" onclick="writeTocomm()">enter</button>
+
+</div>-->
+<button onclick="location.href = 'teacherList.html';" class="w3-button w3-circle w3-2017-navy-peony w3-xlarge" style="position: fixed; bottom: 10px; right: 10px; ">+</button>
+
+<!--<footer class="w3-container w3-teal">
+  <h5>Footer</h5>
+  <p>Footer information goes here</p>
+</footer>-->
+     
+<script>
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<script src="js/FirebaseData.js"></script>
+</body>
+</html> 
